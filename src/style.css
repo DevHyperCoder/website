@@ -1,0 +1,36 @@
+/* fonts */
+@font-face {
+     font-family: "Corbel";
+     src: url("./Corbel.ttf");
+}
+
+
+*{
+     padding:0;
+     margin:0;
+     box-sizing:border-box;
+     
+}
+body{
+     font-family:"Corbel";
+     background-color: #ecf0f1
+     ;
+}
+
+section {
+     width:100%;
+     height:100vh;
+}
+
+.content{
+     margin:auto
+}
+
+a{
+     text-decoration:none;
+     color:#2c3e50
+}
+
+ul{
+     list-style: none;
+}
