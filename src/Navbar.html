@@ -9,25 +9,29 @@
   .hidden {
     display: none;
   }
+  .nav_links {
+    display: none;
+  }
   .open {
-    display: flex;
+    display: block;
   }
   .nav_links {
-    flex-direction: row;
     padding: 15px;
     background-color: white;
-    position: fixed;
-    right: 0%;
+    width: 40%;
+    top: 0;
     height: 100vh;
-    width: 60%;
-    margin-top: 25%;
-    z-index: -1;
+    position: fixed;
+    right: 0;
+    z-index: 1;
   }
   .nav_links > li {
-    padding: 5px 0;
-    font-size: 20px;
+    padding: 5px 15;
+    font-size: 22px;
     text-align: right;
-    z-index: 2;
+  }
+  .first {
+    margin-top: 100px;
   }
   #mobile_menu_toggle {
     display: block;
@@ -39,6 +43,7 @@
     flex-direction: column;
     gap: 15px;
     outline: 0;
+    z-index: 2;
   }
   .line {
     display: block;
@@ -54,8 +59,8 @@
 <header>
   <h2 class="logo">DEV<br />HYPER<br />CODER</h2>
 
-  <ul class="nav_links hidden">
-    <li><a href="#">Home</a></li>
+  <ul class="nav_links">
+    <li class="first"><a href="#">Home</a></li>
     <li><a href="#">Projects</a></li>
     <li><a href="#">Blogs</a></li>
     <li><a href="#">Contact</a></li>
@@ -68,6 +73,8 @@
 </header>
 
 <script>
+  console.log("JavaScript loaded");
+
   const toggler = document.querySelector("#mobile_menu_toggle");
   const links = document.querySelector(".nav_links");
 
