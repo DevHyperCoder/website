@@ -1,3 +1,5 @@
+import ./Button.html
+
 <style>
   .group {
     position: relative;
@@ -92,10 +94,6 @@
   }
 </style>
 
-<!-- TODO Input google effect
-        Button
-        h1 styles
-    -->
 <section class="contact-comp">
   <div class="content">
     <h1 class="header">Contact</h1>
@@ -113,6 +111,11 @@
         <span class="bar"></span>
         <label for="">Message</label>
       </div>
+    <Button>
+        {COMP||contact}
+        {TEXT||Send Message}
+        {WIDTH||100%}
+    </Button>
     </form>
   </div>
 </section>
