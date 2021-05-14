@@ -14,8 +14,6 @@
   }
   .open {
     display: block;
-  }
-  .nav_links {
     padding: 15px;
     background-color: white;
     width: 40%;
@@ -30,7 +28,7 @@
     font-size: 22px;
     text-align: right;
   }
-  .first {
+  .open > .first {
     margin-top: 100px;
   }
   #mobile_menu_toggle {
@@ -54,6 +52,20 @@
   .logo {
     color: #2ecc71;
   }
+  @media only screen and (min-width: 600px) {
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .nav_links > li{
+    color:var(--light-gray)
+  }
+  #mobile_menu_toggle{
+    display:none
+  }
+
+}
 </style>
 
 <header>
