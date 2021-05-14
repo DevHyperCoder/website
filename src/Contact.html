@@ -1,13 +1,112 @@
 <style>
-.contact-comp h1{
+  .contact-comp h1 {
     color: #00ff00;
-}
+  }
+  .group {
+    position: relative;
+    margin-bottom: 45px;
+  }
+
+  .group input {
+    padding: 10px 10px 10px 4px;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid var(--light-grey);
+  }
+
+  .group input:focus {
+    outline: none;
+  }
+
+  label {
+    color: var(--light-grey);
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+  }
+
+  /* active state */
+  input:focus ~ label,
+  input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: var(--dark-grey);
+  }
+
+  .bar {
+    position: relative;
+    display: block;
+    width: 300px;
+  }
+  .bar:before,
+  .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: var(--dark-grey);
+    transition: 0.2s ease all;
+  }
+  .bar:before {
+    left: 50%;
+  }
+  .bar:after {
+    right: 50%;
+  }
+
+  /* active state */
+  input:focus ~ .bar:before,
+  input:focus ~ .bar:after {
+    width: 50%;
+  }
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* active state */
+  input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+  }
+
+  input:focus ~ label,
+  input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: var(--dark-grey);
+  }
 </style>
 
-    <!-- TODO Input google effect
+<!-- TODO Input google effect
         Button
         h1 styles
     -->
 <section class="contact-comp">
-    <h1>Contact</h1>
+  <h1>Contact</h1>
+  <form action="">
+    <div class="group">
+      <input type="text" required />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="">Name</label>
+    </div>
+
+    <div class="group">
+      <input type="text" required />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="">Message</label>
+    </div>
+  </form>
 </section>
