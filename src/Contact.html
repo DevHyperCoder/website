@@ -1,15 +1,17 @@
 <style>
-  .contact-comp h1 {
-    color: #00ff00;
-  }
   .group {
     position: relative;
     margin-bottom: 45px;
   }
+  form{
+    width: 80%;
+    display:block;
+    margin: auto;
+  }
 
   .group input {
     padding: 10px 10px 10px 4px;
-    width: 300px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid var(--light-grey);
   }
@@ -17,7 +19,9 @@
   .group input:focus {
     outline: none;
   }
-
+  input{
+    background-color:transparent
+  }
   label {
     color: var(--light-grey);
     font-size: 18px;
@@ -93,20 +97,22 @@
         h1 styles
     -->
 <section class="contact-comp">
-  <h1>Contact</h1>
-  <form action="">
-    <div class="group">
-      <input type="text" required />
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label for="">Name</label>
-    </div>
-
-    <div class="group">
-      <input type="text" required />
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label for="">Message</label>
-    </div>
-  </form>
+  <div class="content">
+    <h1 class="header">Contact</h1>
+    <form action="">
+      <div class="group">
+        <input type="text" required />
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label for="">Name</label>
+      </div>
+  
+      <div class="group">
+        <input type="text" required />
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label for="">Message</label>
+      </div>
+    </form>
+  </div>
 </section>
