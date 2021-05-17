@@ -5,9 +5,9 @@ import ./Button.html
     position: relative;
     margin-bottom: 45px;
   }
-  form{
+  form {
     width: 80%;
-    display:block;
+    display: block;
     margin: auto;
   }
 
@@ -21,8 +21,8 @@ import ./Button.html
   .group input:focus {
     outline: none;
   }
-  input{
-    background-color:transparent
+  input {
+    background-color: transparent;
   }
   label {
     color: var(--light-grey);
@@ -93,7 +93,7 @@ import ./Button.html
     color: var(--dark-grey);
   }
   @media only screen and (min-width: 600px) {
-    form{
+    form {
       width: 40%;
     }
   }
@@ -109,18 +109,14 @@ import ./Button.html
         <span class="bar"></span>
         <label for="">Name</label>
       </div>
-  
+
       <div class="group">
         <input type="text" required />
         <span class="highlight"></span>
         <span class="bar"></span>
         <label for="">Message</label>
       </div>
-    <Button>
-        {COMP||contact}
-        {TEXT||Send Message}
-        {WIDTH||100%}
-    </Button>
+      <button>{COMP||contact} {TEXT||Send Message} {WIDTH||100%}</button>
     </form>
   </div>
 </section>
